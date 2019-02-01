@@ -28,7 +28,7 @@
 <body>
 	<div class="container">
 		<h3>Forma za unos studenata: </h3>
-		<form action="#">
+		<form action="#" onsubmit="dodaj(this)">
 			<div class="form-group">
 				<label for="ime">Ime:</label>
 				<input type="text" class="form-control" id="ime">
@@ -51,18 +51,18 @@
 				<textarea class="form-control" id="predmeti" placeholder="id p1, naziv p1, profesor p1, ocena p1;&#10;id p2, naziv p2, profesor p2, ocena p2;&#10;...&#10;id pn, naziv pn, profesor pn, ocena pn&#10;(bez ; na kraju)"
 				 rows="6"></textarea>
 			</div>
-			<button class="btn btn-primary" id="submit">Submit</button>
+			<button type="submit" class="btn btn-primary">Submit</button>
 		</form>
 		<br />
 		<div class="d-flex flex-row justify-content-center">
 			<div class="p-4">
-				<button id="predstavi" class="btn btn-info">Predstavi sve studente</button>
+				<button id="predstavi" class="btn btn-info" onclick="dugmePredstavi()">Predstavi sve studente</button>
 			</div>
 			<div class="p-4">
-				<button id="devetke" class="btn btn-info">Predstavi devetke</button>
+				<button id="devetke" class="btn btn-info" onclick="dugmeDevetke()">Predstavi devetke</button>
 			</div>
 			<div class="p-4">
-				<button id="omiljeni" class="btn btn-info">Studenti sa omiljenim profesorima</button>
+				<button id="omiljeni" class="btn btn-info" onclick="dugmeOmiljeni()">Studenti sa omiljenim profesorima</button>
 			</div>
 		</div>
 		<div id="tekst" class="jumbotron"></div>
